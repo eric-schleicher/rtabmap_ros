@@ -76,6 +76,16 @@ This section shows how to install RTAB-Map ros-pkg on **ROS Hydro/Indigo/Jade/Ki
     $ make
     $ sudo make install
     ```
+    
+    if, when running rtabmap standalone (from outside ros), you encounter the follwoing error: 
+    ```
+    rtabmap: error while loading shared libraries: librtabmap_core.so.0.11: cannot open shared object file: No such file or directory
+    ```
+    running the following command may resolve the issue
+    
+    ```bash
+    $ sudo ldconfig
+    ```
 
 3. Install RTAB-Map ros-pkg in your src folder of your Catkin workspace.
  
